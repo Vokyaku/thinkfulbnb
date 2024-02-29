@@ -1,0 +1,292 @@
+/* ------- General Styles ------- */
+
+body {
+  font-family: "Lato", sans-serif;
+  background-color: #f8f9fa; /* Set your desired background color */
+  background-image: url('your-background-image.jpg'); /* Optionally, set a background image */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  max-width: 100%; /* Set maximum width for the entire content */
+  margin: 0 auto; /* Center the content horizontally */
+}
+
+h2 {
+  font-size: 26px;
+  font-weight: 400;
+  margin: 0 10px 10px 10px;
+  text-align: center;
+}
+
+h3 {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+p {
+  line-height: 1.5em;
+  margin: 0;
+  padding: 5px;
+}
+
+section {
+  padding: 20px;
+}
+
+section.alternate-background {
+  background-color: #00a699;
+  color: #fff;
+}
+
+main img {
+  width: 100%;
+  padding: 5px;
+}
+
+/* --- Groups & Items --- */
+
+.group {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  flex: 1;
+  margin: 10px;
+}
+
+.item-double {
+  flex: 2;
+}
+
+/* ------- Navigation ------- */
+
+header {
+  background-color: #ff385c;
+  padding: 20px 20px 0 20px;
+  text-align: center;
+}
+
+.logo {
+  font-family: "Pangolin", cursive;
+  font-size: 3.5rem;
+  color: #fff;
+  max-width: 100%;
+}
+
+header nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+header nav ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+header nav ul li a {
+  color: #fff;
+  text-decoration: none;
+}
+
+header nav ul li a:hover {
+  color: #bdbdbd;
+}
+
+/* ------- Search Form ------- */
+form {
+  border: 2px solid #ff385c;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+form label {
+  font-weight: bold;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form select,
+form input {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+form button {
+  background-color: #ff385c;
+  border: none;
+  color: #fff;
+  font-size: 24px;
+  padding: 15px;
+  width: 100%;
+}
+
+/* ------- Footer ------- */
+
+footer {
+  background-color: #ff385c;
+}
+
+footer p {
+  color: #fff;
+  text-align: center;
+  padding: 20px;
+}
+
+/* ------- Media Query ------- */
+@media all and (min-width: 480px) {
+  /* Update styles for larger screens here */
+  header {
+    display: flex;
+    align-items: center; /* vertical center */
+    justify-content: space-between; /* space logo & nav */
+    padding: 20px;
+  }
+
+  form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  form label {
+    display: block;
+    width: auto;
+    margin-bottom: 5px;
+    margin-right: 10px;
+  }
+
+  form select,
+  form input {
+    width: 100%;
+    margin-bottom: 10px;
+    margin-right: 10px;
+  }
+
+  form button {
+    width: auto;
+  }
+  
+  #about .item {
+    flex: 1;
+  }
+
+  #about .item-double {
+    flex: 2;
+  }
+
+  main img {
+    max-width: 50%;
+  }
+  
+  .about-content {
+    display: flex;
+    flex: 1;
+    align-items: center; /* Vertically center items */
+  }
+
+  .about-content .images {
+    width: 50%;
+    display: flex; /* Use flexbox to display images in a row */
+    margin-right: 10px; /* Add spacing between images */
+    margin-right: 0; /* Remove margin from the last image to prevent extra spacing */
+  }
+  
+  .about-content .images img {
+    width: 100%;
+    display: flex; /* Use flexbox to display images in a row */
+    flex: 1;
+    height: auto;
+  }
+
+  .about-content .text {
+    display: flex;
+    flex: 1;
+    padding: 30px;
+    border: 1px;
+  }
+
+  .text {
+   flex: 1; /* Allow text to take remaining space */
+   padding-right: 20px; /* Add spacing between text and image */
+  }
+
+  .text p {
+   text-align: justify; /* Justify text alignment */
+  }
+
+  .img-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .img-wrapper .image {
+    width: 100%; /* Adjust width as needed */
+    display: flex; /* Use flexbox to display images in a row */
+    padding: 20px;
+    box-sizing: border-box; /* Include padding in width calculation */
+  }
+
+  .img-wrapper img {
+    width: 100%; /* Make images fill the width of their container */
+    display: flex; /* Use flexbox to display images in a row */
+    margin-bottom: 20px; /* Adjust margin as needed */
+  }
+
+  .images {
+    flex: 1; /* Images take equal space */
+  }
+  
+  .images img {
+    margin-right: 10px; /* Add spacing between images */
+  }
+
+  .images img:last-child {
+    margin-right: 0; /* Remove margin from the last image to prevent extra spacing */
+  }
+
+  #ideas {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+  }
+  
+  .idea-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .idea {
+    width: calc(50% - 20px); /* Adjust width of each idea container */
+    flex-shrink: 0; /* Prevent items from shrinking */
+  }
+  
+  .idea h3 {
+    margin-top: 10px;
+  }
+  
+  .idea img {
+    max-width: 100%;
+  }
+
+  .host-content {
+    display:flex;
+    height: auto;
+  }
+
+  .host-content .text {
+    align-self:center;
+  }
+  .host-content .image {
+    flex: 1;
+  }
+
+  .host-content .image img {
+    max-width: 100%;
+  }
+
+}
